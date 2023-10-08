@@ -10,6 +10,7 @@
 override func touchesBegan(_ touches: Set, with event: UIEvent?) {
     super .touchesBegan(touches, with: event)
 }
+
 4. Валидируйте данные пользовательского ввода, используя метод shouldPerformSegue(withIdentifier:sender:). Этот метод вызывается перед выполнением перехода, и если он возвращает false, переход не состоится:
 
 override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -21,6 +22,7 @@ override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?
     // Введенное имя валидно, разрешаем переход
     return true
 }
+
 5. В случае успешной авторизации перейдите на второй экран WelcomeViewController, где отобразите приветствие с именем пользователя и кнопку "логаута" для возврата на первый экран.
 
 6. Передайте имя пользователя между экранами, используя метод prepare.
