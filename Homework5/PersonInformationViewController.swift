@@ -23,13 +23,10 @@ final class PersonInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fotoPersonImage.image = UIImage(named: "FotoPerson")
-        fotoPersonImage.layer.cornerRadius = fotoPersonImage.frame.size.width / 2
+        getPhoto()
         view.addVerticalGradientLayer(topColor: model.primaryColor, bottomColor: model.secondaryColor)
-    
         getLabel()
     }
-    
     
     private func getLabel() {
         nameLabel.text = personInformation.namePerson
@@ -37,5 +34,10 @@ final class PersonInformationViewController: UIViewController {
         companyLabel.text = personInformation.company
         appointmentLabel.text = personInformation.appointment
         academicDegreeLabel.text = personInformation.academicTitle
+    }
+    
+    private func getPhoto() {
+        fotoPersonImage.image = UIImage(named: "FotoPerson")
+        fotoPersonImage.layer.cornerRadius = fotoPersonImage.frame.size.width / 2
     }
 }
