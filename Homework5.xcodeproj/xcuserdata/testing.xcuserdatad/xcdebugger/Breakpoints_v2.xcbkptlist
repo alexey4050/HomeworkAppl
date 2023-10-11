@@ -94,6 +94,21 @@
                   endingLineNumber = "55"
                   offsetFromSymbolStart = "65">
                </Location>
+               <Location
+                  uuid = "F80DB462-9C22-4A0E-B417-13E060FD9CE8 - 152c48bcacac666d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Homework5.LoginViewController.forgotRegisterData(__C.UIButton) -&gt; ()"
+                  moduleName = "Homework5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/testing/Documents/%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%8F%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0.%20SwiftBookApp/Homework7/Homework5/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "65">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

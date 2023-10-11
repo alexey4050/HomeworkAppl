@@ -24,8 +24,14 @@ final class PersonInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fotoPersonImage.image = UIImage(named: "FotoPerson")
+        fotoPersonImage.layer.cornerRadius = fotoPersonImage.frame.size.width / 2
         view.addVerticalGradientLayer(topColor: model.primaryColor, bottomColor: model.secondaryColor)
     
+        getLabel()
+    }
+    
+    
+    private func getLabel() {
         nameLabel.text = personInformation.namePerson
         surnameLabel.text = personInformation.surnamePerson
         companyLabel.text = personInformation.company
