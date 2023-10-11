@@ -9,19 +9,27 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet var welcomeLabel: UILabel!
     
-    var userName: String?
+    var user = ""
+    
+    private let otherModel = ModelColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let userName = userName {
-            welcomeLabel.text = "Welcome, \(userName)!"
+        view.addVerticalGradientLayer(topColor: otherModel.primaryColor, bottomColor: otherModel.secondaryColor)
+        welcomeLabel.text = "Welcome, \(user)!"
         }
     }
     
-    @IBAction func logoutPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    extension UIView {
+        func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
+            let gradient = CAGradientLayer()
+            gradient.frame = bounds
+            gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+            gradient.locations = [0.0, 1.0]
+            gradient.startPoint = CGPoint(x: 0, y: 0)
+            gradient.endPoint = CGPoint(x: 0, y: 1)
+            layer.insertSublayer(gradient, at: 0)
+        }
     }
-}
